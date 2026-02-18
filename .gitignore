@@ -1,0 +1,31 @@
+# Конфигурация с паролями — не публиковать
+email_config.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+
+# Данные и рабочие файлы
+*.xlsx
+*.xls
+*.xlsm
+*.pdf
+Отчет_*.xlsx
+
+# Папки с данными
+архив/
+Выписки ВТБ/
+счета/
+
+# IDE и ОС
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
