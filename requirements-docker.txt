@@ -1,0 +1,10 @@
+# Минимальные зависимости для Docker-приложения (проверка разметки)
+tzdata>=2024.1
+pandas>=2.0.0
+openpyxl>=3.1.0
+xlrd>=2.0.0
+openai>=1.0.0
+python-dotenv>=1.0.0
+fastapi>=0.100.0
+uvicorn[standard]>=0.22.0
+apscheduler>=3.10.0

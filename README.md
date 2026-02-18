@@ -78,8 +78,32 @@ python update_reestr_from_51.py
 - `pdf_processor.py` - модуль для обработки PDF выписок
 - `update_reestr_from_51.py` - модуль для обновления реестра из Excel
 - `report_generator.py` - модуль для формирования отчетов
+- `unmarked_alert.py` - проверка нерозмеченных операций и формирование сообщения для Telegram через OpenAI
 - `email_config.txt` - конфигурация почты (создайте на основе example)
 - `requirements.txt` - зависимости Python
+
+### Проверка нерозмеченных операций (Ст1)
+
+Скрипт `unmarked_alert.py` находит строки без разметки по статьям, разбивает их на поступления и списания и формирует сообщение для Telegram через OpenAI.
+
+1. Создайте файл `.env` на основе `.env.example` и укажите `OPENAI_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`
+2. Запустите `ПроверитьРазметку.bat` или `python unmarked_alert.py`
+
+### Ежедневная автоматическая проверка (13:45 МСК)
+
+**Вариант A — Windows (bat):**
+1. Запустите **`Установить_ежедневное_расписание.bat`** от имени администратора
+2. Логи сохраняются в папку `logs/unmarked.log`
+
+**Вариант B — Docker (на вашем компьютере):**
+1. Установите Docker Desktop
+2. Скопируйте `УУ2025 - оптим.xlsx` в папку `data/`
+3. Создайте `.env` с `OPENAI_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`
+4. Запустите: `docker compose up -d --build`
+5. При старте — проверка сразу; ежедневно в 13:45 МСК — автоматически
+6. Ручной запуск: http://localhost:8000/run
+
+Подробнее: [DEPLOY.md](DEPLOY.md)
 
 ## Настройка почты
 

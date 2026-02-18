@@ -1,5 +1,6 @@
 # Конфигурация с паролями — не публиковать
 email_config.txt
+.env
 
 # Python
 __pycache__/
@@ -22,6 +23,9 @@ env/
 архив/
 Выписки ВТБ/
 счета/
+logs/
+data/*.xlsx
+data/*.xls
 
 # IDE и ОС
 .idea/

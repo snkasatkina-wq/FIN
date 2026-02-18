@@ -1,0 +1,25 @@
+.git
+.gitignore
+__pycache__
+*.pyc
+.env
+.venv
+venv
+logs
+*.bat
+*.md
+*.xlsx
+*.xls
+*.pdf
+архив
+Выписки ВТБ
+счета
+email_config.txt
+email_fetcher.py
+fill_config.py
+inspect_excel.py
+main.py
+pdf_processor.py
+report_generator.py
+step1_fetch_email.py
+update_reestr_from_51.py
